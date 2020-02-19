@@ -1,1 +1,1 @@
-print(int(input()).bitlength())
+print(int(input()).bit_length())
