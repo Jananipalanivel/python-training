@@ -7,3 +7,16 @@ Constraints
 Output Format
 If present in series print only the Index
 else print "NOT PRESENT"
+
+#answer
+n=int(input())
+k=bin(n)[2:]
+odd=k[1::2]
+if len(k)%2!=0 and int(odd)==0:
+    even=k[0::2]
+    print(int(even,2))
+else:
+    print("NOT PRESENT")
+    
+    
+        
