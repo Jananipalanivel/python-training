@@ -10,4 +10,10 @@ Sample Input 0
 4129984
 Sample Output 0
 1
+#answer
+a=int(input())
+if a%9:
+    print(a%9)
+else:
+    print("9")
 
