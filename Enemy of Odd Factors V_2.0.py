@@ -12,3 +12,11 @@ Sample Output 0
 3
 Explanation 0
 2 5 10 these three numbers which diveide 20 are enemies of odd factors
+#answer
+a=int(input())
+c=0
+l=[2,3,5,7,11,13,17,19]
+for i in l:
+    if a%i==0:
+        c+=1
+print(2**c-1)
