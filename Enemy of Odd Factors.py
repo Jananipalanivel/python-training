@@ -8,10 +8,9 @@ Output Format
 Enemy of Odd Factor / Friend of Odd Factor
 
 #answer
-a=int(input())
-if a%2!=0:
-    print("Friend of Odd Factor")
+from math import sqrt as s
+n=int(input())
+if (s(n)%1==0):
+    print("Enemy of Odd Factor")
 else:
-    print("Enemy of Odd Factor")
-if a==1:
-    print("Enemy of Odd Factor")
+    print("Friend of Odd Factor")
