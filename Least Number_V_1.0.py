@@ -12,3 +12,14 @@ Sample Output 0
 12
 Explanation 0
 After removing rwo digits the least number is 12
+#answer
+n=input()
+k=int(input())
+f=len(n)-k
+m=n.index(min(n[:f]))
+g=n[m:]
+k=k-m
+g=list(g)
+for i in range(k):
+    g.remove(max(g))
+print("".join(g))
