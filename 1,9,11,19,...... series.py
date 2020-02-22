@@ -13,21 +13,23 @@ for _ in range(100):
         le+=1
         i=0
 #answer 2
-n=int(input())
-fill=1
-k=0
-p=2
-c=1
+n = int(input())
+fill = 1
+k = 0
+p = 2
+c = 1
 while(n):
-    s=bin(k)[2:]
-    s=s.zfill(fill)
-    s=s.replace("1","9")
-    s=s.replace("0","1")
-    print(s)
+    g = bin(k)[2:]
+    g = g.zfill(fill)
+    g = g.replace('1','9')
+    g = g.replace('0','1')
+    print(g)
     k+=1
     c+=1
-    if (c>p):
-        k=0
+    if(c>p):
+        k = 0
         p*=2
         fill+=1
-        c=1
+        c = 1
+    
+    n-=1
