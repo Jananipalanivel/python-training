@@ -15,9 +15,31 @@ Live
 Explanation 0
 The person can give one chocolate from one of the box to a random person and eat the chocolate from the other box, so now as the both the boxes are empty the persosn gets to live.
 #answer
-a=int(input())
-b=sum(list(map(int,input().split())))
-if b%2==0:
-        print("Live")
+n = int(input())
+a = list(map(int,input().split()))
+a.sort()
+l = 0
+r = n-1
+count = n
+while(count>0):
+    if a[l]!=0:
+        a[l]-=1
+        a[r]-=1
+        if(a[r]<a[r-1]):
+            k = r
+            while(a[k]<a[k-1]):
+                a[k],a[k-1] = a[k-1],a[k]
+                k-=1
+    if(a[l]==0):
+        l+=1
+        count-=1
+    if(a[r]==0):
+        r-=1
+        count-=1
+    if(r<=l):
+        break
+    
+if(count==0):
+    print("Live")
 else:
-        print("Die")
+    print("Die")
